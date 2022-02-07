@@ -1,0 +1,121 @@
+<!-- Ayelén Hernández Rodríguez 1º ASIR B -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctame</title>
+    <link rel="icon" type="img/png" href="../imagenes/favicon-96x96.png">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li>
+                <a href="../index.html">Tim Berners-Lee</a>            
+            </li>
+
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="precios.html">Tabla de precios</a>
+            </li>
+
+            <li>
+                <a href="contactame.html">Contáctame</a>
+            </li>
+        </ul>
+
+        <img src="../imagenes/imagen-menu.png" usemap="#menu">
+
+        <map name="menu">
+            <area shape="rect" coords="15, 44, 107, 132" href="../index.html">
+            <area shape="circle" coords="173, 89, 47" href="portfolio.html">
+            <area shape="poly" coords="288, 42, 344, 135, 231, 135" href="precios.html">
+            <area shape="rect" coords="351, 32, 438, 140" href="contactame.html"> 
+        </map>
+    </div>
+
+    <div id="main-content">
+        <h1>Contactame</h1>
+
+        <h2>Formulario de Contacto</h2>
+
+        <form name="formulario" method="post" enctype="multipart/form-data" action="/contactar.php">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    Nombre:
+                    <input type="text" name="nombre" required autocomplete="on"
+                    size="40" placeholder="Introduce tu nombre">...*
+                </div>
+                <div>
+                    Apellidos:
+                    <input type="text" name="apellido" required autocomplete="on"
+                    size="40" placeholder="Introduce tu apellido">...*
+                </div>
+                <div>
+                    Email:
+                    <input type="email" name="correo" required autocomplete="on" pattern="[A-Za-z] [@] {5-27}">...*
+                </div>
+                <div>
+                    Seleccione la fecha deseada:
+                    <input type="date" name="fecha">
+                </div>
+                <div>
+                    Edad:
+                    <input type="number" min="10" max="100" pattern="[10-100]" step="1" title="El valor debe ser igual o superior a 10 e igual o inferior que 100.">
+                </div>
+                <div>
+                    Sexo:
+                    <inpuT type="radio" name="sexo" value="M">Mujer
+                    
+                    <input type="radio" name="sexo" value="H" checked>Hombre
+                </div>
+
+                <div>
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais">
+                        <option value="" selected="selected">- Selecciona -</option>
+                        <option value="españa">España</option>
+                        <option value="francia">Francia</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="italia">Italia</option>
+                     </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Otros datos</legend>
+                <div>
+                    Mensaje:
+                    <textarea spellcheck="true" cols="60" rows="10" placeholder="Introduce tu mensaje..."></textarea>
+                </div>
+
+                <div>
+                    Adjunta una foto...
+                    <input type="file" name="adjunto" accept=".pdf, .jpg, .png" multiple="off">
+                </div>
+            </fieldset>
+            
+            <div>
+                <input type="checkbox" name="condiciones" required checked> He leído las condiciones...
+            </div>
+            
+            <div>
+                <input type="reset" name="Limpiar">
+                <input type="submit" name="enviar">
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <div id="footer">
+        &#169 2040 <a href="../index.html">www.MiSitio.com</a>
+    </div>
+</body>
+</html>
